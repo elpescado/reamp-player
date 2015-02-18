@@ -1,0 +1,88 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+
+.ReampPlayerOuterFrame {
+	width: 640px;
+}
+
+.ReampPlayerMainFrame {
+	border: 1px solid #eee;
+	width: 640px;
+	background-color: #f7f7f7;
+	color: #999; 
+}
+
+.ReampPlayerMainFrame button {
+	background: none;
+	color: #d00;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.ReampPlayerMainFrame .Play {
+	width: 64px;
+	height: 64px;
+	font-size: 56px;
+}
+
+.ReampPlayerMainFrame .Settings {
+	background-color: #eee;
+}
+
+.ReampPlayerMainFrame .Settings canvas {
+	color: #d00;
+}
+
+.ReampPlayerMainFrame .Controls {
+	position: relative;
+	padding: 8px;
+}
+
+.ReampPlayerMainFrame .TrackLabel {
+	position: absolute;
+	top: 8px;
+	left: 74px;
+	font-size: 13px;
+	color: #000;
+}
+
+.ReampPlayerMainFrame .Tracks {
+	padding: 8px;
+	margin: 0px;
+	overflow:auto;
+	width: 100%;
+}
+.ReampPlayerMainFrame .Tracks li {
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	float: left;
+	min-width: 48px;
+	text-align: center;
+	
+}
+.ReampPlayerMainFrame .Tracks img {
+	opacity: 0.5;
+}
+.ReampPlayerMainFrame .Tracks img:hover {
+	opacity: 0.6;
+}
+.ReampPlayerMainFrame .Tracks .selected img {
+	opacity: 1.0;
+}
+
+.ReampPlayerOuterFrame .Copyright {
+	font-size: 10px;
+	color: #999;
+	text-align: right;
+}
+.ReampPlayerOuterFrame .Copyright a:link,
+.ReampPlayerOuterFrame .Copyright a:visited {
+	text-decoration: underline;
+	color: #999;
+}
+.ReampPlayerOuterFrame .Copyright a:hover {
+	color: #d00;
+}

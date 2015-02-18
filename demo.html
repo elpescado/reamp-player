@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>ReampPlayer Demo</title>
+		<script src="player.js"></script>
+		<link rel="stylesheet" href="player.css" type="text/css" />
+	</head>
+	<body>
+		<h1>ReampPlayer Demo</h1>
+
+		<div class="player">
+			<script type="application/json">
+			{
+				"title": "Effect demo",
+				"tracks": [
+					{
+						"title":  "Boss BD-2",
+						"sources":{"audio/wav": "track 1.wav"},
+						"icon":   "http://cdn.roland.com/assets/images/products/main/bd-2_top_main.jpg",
+						"settings": [
+							"gain",  0.0,
+							"tone",  0.5,
+							"volume",1.0
+						]
+					},
+					{
+						"title":  "Boss DS-1",
+						"sources":{"audio/wav": "track 2.wav"},
+						"icon":   "http://cdn.roland.com/assets/images/products/main/ds1_main.jpg",
+						"settings": [
+							"gain",  0.1,
+							"tone",  0.2,
+							"volume",0.3
+						]
+					},
+					{
+						"title":  "Boss MT-2",
+						"sources":{"audio/wav": "track 3.wav"},
+						"icon":   "http://cdn.roland.com/assets/images/products/main/mt-2_top_main.jpg",
+						"settings": [
+							"gain",  0.3,
+							"bass", 0.6,
+							"mid",  0.5,
+							"treble",0.6,
+							"volume",0.7
+						]
+					}
+				]
+			}
+			</script>
+		</div>
+	</body>
+</html>
