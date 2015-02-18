@@ -272,7 +272,7 @@ PlayerView.prototype.createUI = function()
 
 	var copyright = document.createElement("div");
 	copyright.className = "Copyright";
-	copyright.innerHTML = 'Powered by <a href="http://github.com/">Reamp Player</a>';
+	copyright.innerHTML = 'Powered by <a href="https://github.com/elpescado/reamp-player">Reamp Player</a>';
 	this.outerFrame.appendChild(copyright);
 
 	this.redrawSettingsView(this.params.tracks[0].settings);
