@@ -3,3 +3,4 @@
 [ ] Support audio codecs
 [ ] Do not download tracks all at once
 [ ] Load track data on demand
+[ ] Display track waveform
