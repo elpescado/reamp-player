@@ -79,13 +79,21 @@ PlayerEngine.prototype.loadTrackFromUri = function(track,uri)
 
 
 /**
- * Callback called when track is loaded
+ * Callback called when raw track is data has been downloaded
  */
 PlayerEngine.prototype.trackLoadedCallback = function(track,evt)
 {
+	var req = evt.target;
+    this.ctx.decodeAudioData(req.response, this.trackDecodedCallback.bind(this, track));
+}
+
+
+/**
+ * Callback called when track data has been decoded
+ */
+PlayerEngine.prototype.trackDecodedCallback = function(track, buffer)
+{
 	var index = this.tracks.indexOf(track);
-	var req    = evt.target;
-	var buffer = this.ctx.createBuffer(req.response, false);
 
 	this.buffers[index] = buffer;
 
