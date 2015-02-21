@@ -113,12 +113,44 @@ PlayerEngine.prototype.loadTracks = function()
 
 
 /**
+ * Select most suitable source URI
+ */
+PlayerEngine.prototype.selectTrackUri = function(track)
+{
+	var audio = new Audio();
+	var preferred = ['audio/mp4', 'audio/ogg', 'audio/mp3'];
+
+	/* Check preferred formats */
+	for (var i in preferred) {
+		var codec = preferred[i];
+
+		var supported = audio.canPlayType(codec);
+		if (codec in track.sources && supported) {
+			return track.sources[codec];
+		}
+	}
+
+	/* Fallback: pick first format that is likely to be playable */
+	for (var codec in track.sources) {
+		var supported = audio.canPlayType(codec);
+		if (codec in track.sources && supported) {
+			return track.sources[codec];
+		}
+	}
+
+	/* FIXME last resort */
+	return track.sources["audio/wav"];
+}
+
+
+/**
  * Load single track data
  */
 PlayerEngine.prototype.loadSingleTrack = function(i)
 {
 	var t = this.tracks[i];
-	this.loadTrackFromUri(t,t.sources['audio/wav']);
+	var uri = this.selectTrackUri(t);
+	this.loadTrackFromUri(t,uri);
 }
 
 

@@ -1,6 +1,6 @@
 [x] Firefox compatibility
 [x] Chrome compatibility
-[ ] Support audio codecs
+[x] Support audio codecs
 [ ] Do not download tracks all at once
 [ ] Load track data on demand
 [ ] Display track waveform
